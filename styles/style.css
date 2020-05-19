@@ -1,0 +1,212 @@
+/* General */
+/* Shouldn't be changed if possible */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#main-content {
+  padding-bottom: 2.5rem;
+}
+
+/* Navigation Bar */
+ul.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.name {
+  float: left;
+  padding-left: 15px;
+}
+
+.name li {
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.name a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.name a:hover {
+  color: red;
+  opacity: .85;
+}
+
+.logo img{
+  height: 47.5px;
+  float: left;
+  margin-right: 12.5%;
+}
+
+.main {
+  float: left;
+}
+
+.main, #dropbtn {
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-top: 2.5px solid #333;
+  transition: 0.3s;
+}
+
+.main:hover, .dropdown:hover #dropbtn {
+  border-top: 2.5px solid red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  opacity: 1;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e8e8e8;
+  border-bottom: 2px solid red;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin-top: 46px;
+  background-color: #d1d1d1;
+}
+
+/* Login button */
+.login {
+  float: right;
+  margin-right: 2.5%;
+  border: 2.5px solid #333;
+  padding: 7.5px 16px;
+}
+
+.login a {
+  display: inline-block;
+  color: white;
+  font-size: 17.5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.login:hover a {
+  transform: translateX(-15px);
+  color: red;
+}
+
+.login span {
+  display: none;
+  font-size: 20px;
+}
+
+.login:hover span {
+  display: inline-block;
+  color: white;
+ }
+
+/* Content */
+.intro article {
+  position: absolute;
+  top: 125px;
+  margin-left: 30px;
+  padding: 20px 0px 20px 20px;
+  width: 70%;
+  background-color: rgba(236, 236, 236, 0.9);
+}
+
+.link {
+  margin: 2.5% 0%;
+}
+
+.link a {
+  color: white;
+  text-decoration: none;
+  background-color: #333;
+  padding: 10px 15px;
+}
+
+.link a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.content ul {
+  list-style-type: disc;
+}
+
+.content li a, p:not(.link) a {
+  color: red;
+  text-decoration: none;
+}
+
+.content li a:hover, p:not(.link) a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+/* https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 12.5px;
+  color: white;
+  background-color: #333;
+}
+
+/* Specific Content Starts Here */
+
+/* Accomodation page */
+#acc-intro {
+  background: url("../images/accommodation_intro.jpg") no-repeat scroll;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  filter: blur(2.5px);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* Transportation page */
+#trans-intro {
+  background: url("../images/transport_intro.jpg") no-repeat scroll;
+  background-size: 100% 150%;
+  background-position: center 100%;
+  height: 300px;
+  filter: blur(2.5px);
+  border: 1px solid rgba(255,255,255,1);
+}
+
+/* Discussion page */
+#alert {
+  font-size: 100px;
+  color : rgb(255, 187, 0);
+}
+
+.development {
+  text-align: center;
+  padding-top: 150px;
+}
