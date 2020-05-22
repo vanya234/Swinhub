@@ -210,3 +210,55 @@ footer {
   text-align: center;
   padding-top: 150px;
 }
+
+/* Login page */
+form {
+  width: 50%;
+  margin: 2.5% auto;
+}
+
+fieldset {
+  padding: 25px;
+}
+
+.hr {
+  margin-bottom: 25px;
+}
+
+input {
+  width: 97%;
+  padding: 10px;
+  margin: 10px 0 25px 0;
+  display: inline-block;
+  border: none;
+  background: #e8e8e8;
+}
+
+input:focus {
+  background-color: rgba(51,51,51,0.3);
+  outline-color: red;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancel {
+  padding: 14px 10px;
+  background-color: #f44336;
+}
+
+.cancel, .sign-up {
+  float: left;
+  width: 50%;
+}
