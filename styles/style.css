@@ -73,8 +73,9 @@ ul.nav-bar {
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-  opacity: 1;
   z-index: 1;
+  margin-left: 2%;
+  margin-top: 3.75%;
 }
 
 .dropdown-content a {
@@ -91,7 +92,6 @@ ul.nav-bar {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  margin-top: 46px;
   background-color: #d1d1d1;
 }
 
@@ -130,7 +130,7 @@ ul.nav-bar {
 .intro article {
   position: absolute;
   top: 125px;
-  margin-left: 30px;
+  margin-left: 40px;
   padding: 20px 0px 20px 20px;
   width: 70%;
   background-color: rgba(236, 236, 236, 0.9);
@@ -180,6 +180,80 @@ footer {
 
 /* Specific Content Starts Here */
 
+/* Home page */
+.main-intro {
+  text-align: center;
+  line-height: 1px;
+}
+
+#main-intro {
+  background: url("../images/home_intro.jpg") no-repeat fixed;
+  background-size: 100% 500px;
+  background-position: center 25%;
+  filter: blur(.5px);
+  height: 350px;
+  margin: 2.5px 0px;
+}
+
+.main-intro article {
+  position: absolute;
+  top: 125px;
+  left: 150px;
+  background-color: rgba(240, 240, 240, 0.95);
+  padding: 20px 0px;
+  width: 75%;
+}
+
+.main-intro h1 {
+  font-size: 4.5em;
+}
+
+.main-intro p {
+  font-size: 20px;
+}
+
+.grid-content {
+  background-color: rgb(240,240,240);
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.grid-items {
+  display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 1px 7.5px grey;
+  margin: 50px 25px;
+	text-align: center;
+  padding: 10px;
+}
+
+.grid-content a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.grid-content a:hover {
+  color: red;
+}
+
+.grid-content a:hover p{
+  text-decoration: dotted underline;
+}
+
+.grid-content i {
+  font-size: 50px;
+  padding: 20px;
+}
+
+.grid-content p {
+  font-size: 1.25em;
+}
+
 /* Accomodation page */
 #acc-intro {
   background: url("../images/accommodation_intro.jpg") no-repeat scroll;
@@ -201,6 +275,8 @@ footer {
 }
 
 /* Discussion page */
+
+/* For development use only
 #alert {
   font-size: 100px;
   color : rgb(255, 187, 0);
@@ -209,9 +285,106 @@ footer {
 .development {
   text-align: center;
   padding-top: 150px;
+}*/
+
+#discuss-intro {
+  background: url("../images/discuss_intro.jpg") no-repeat scroll;
+  background-size: cover;
+  background-position: 100% 50%;
+  height: 300px;
+  filter: blur(.25px);
+  border: 1px solid rgba(255,255,255,1);
+}
+
+.topic {
+  margin-top: 1.5%;
+  border: 5px solid #dddddd;
+  margin: 1.5%;
+  padding: 0px 10px;
+  padding-bottom: 20px;
+}
+
+.topic h2{
+  text-decoration: underline;
+}
+
+.chat {
+  background-color: #f1f1f1; 
+}
+
+.chat1, .chat2, .chat3 {
+  padding-right: 10px;
+}
+
+.chat1 {
+  padding-left: 10px;
+}
+
+.chat2 {
+  padding-left: 20px;
+}
+
+.chat3 {
+  padding-left: 30px;
+}
+
+.user {
+  border-bottom: 1px solid red;
+  width: 52.5px;
+  padding: 5px 10px;
+}
+
+.user img {
+  border-radius: 50%;
+  height: 50px;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.username {
+  text-align: center;
+  font-size: 15px;
+}
+
+.time {
+  text-align: right;
+  display: block;
+}
+
+.divider {
+  width: 98.5%;
 }
 
 /* Login page */
+#selection {
+  margin-top: 12.5%;
+}
+
+#selection button {
+  display: block;
+  width: 250px;
+  padding: 10px 0px;
+  font-size: 20px;
+  background-color: rgb(97, 97, 97);
+  border: 1px solid rgb(97, 97, 97);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  margin: 15px auto;
+}
+
+#selection a {
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+#selection a:hover {
+  color: rgb(255, 55, 55);
+}
+
+#signup-form {
+  display: none;
+}
+
 form {
   width: 50%;
   margin: 2.5% auto;
@@ -232,14 +405,19 @@ input {
   display: inline-block;
   border: none;
   background: #e8e8e8;
+  transition: 0.5s;
 }
 
 input:focus {
-  background-color: rgba(51,51,51,0.3);
   outline-color: red;
 }
 
-button {
+.required {
+  color: red;
+  margin-left: 2.5px;
+}
+
+form button {
   background-color: #4CAF50;
   color: white;
   padding: 14px 10px;
@@ -249,7 +427,7 @@ button {
   opacity: 0.9;
 }
 
-button:hover {
+form button:hover {
   opacity:1;
 }
 

@@ -5,6 +5,7 @@
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="scripts/form.js"></script>
   <title>Forms | SwinHub</title>
 </head>
 
@@ -40,41 +41,46 @@
       </ul>
 
       <!-- Content starts here -->
-      <form>
+      <form id="signup-form" onsubmit="validateForm()">
         <div class="form-container">
             <fieldset>
                 <h2>Sign Up</h2>
                 <p>Please complete this form to create an account</p><hr class="hr">
 
-                <label for="id">Student ID</label>
-                <input type="text" name="id" class="input" id="id" required>
+                <label for="id">Student ID</label><span class="required">*</span>
+                <input type="text" name="id" class="input" id="id" placeholder="123456789">
                 
-                <label for="email">Email</label>
-                <input type="email" name="email" class="input" id="email" required>
+                <label for="email">Email</label><span class="required">*</span>
+                <input type="email" name="email" class="input" id="email" placeholder="example@email.com">
 
-                <label for="uname">Username</label>
-                <input type="text" name="uname" class="input" id="uname" required>
+                <label for="uname">Username</label><span class="required">*</span>
+                <input type="text" name="uname" class="input" id="uname" placeholder="User">
 
-                <label for="pwd">Password</label><p id="notice"><i>Must contain at least 1 capital letter and 1 number</i></p>
-                <input type="password" class="input" name="pwd" id="pwd" required>
+                <label for="pwd">Password</label><span class="required">*</span>
+                <input type="password" class="input" name="pwd" id="pwd">
 
-                <label for="confirm">Confirm Password</label>
-                <input type="password" class="input" name="confirm" id="confirm" required>
+                <label for="confirm">Confirm Password</label><span class="required">*</span>
+                <input type="password" class="input" name="confirm" id="confirm">
 
                 <label for="contact">Contact No.</label>
                 <input type="tel" name="contact" class="input" id="contact">
 
                 <p>By creating an account, you agree to our <a href="terms.html">Terms & Privacy</a></p>
 
-                <button type="button" class="cancel">Cancel</button>
+                <button type="button" class="cancel" onclick="cancelForm()">Cancel</button>
                 <button type="submit" class="sign-up">Sign Up</button>
             </fieldset>
         </div> 
       </form>
+
+      <div id="selection">
+        <button><a href="https://students.swin.edu.au/">Login as Current Student</a></button>
+        <button onclick="displayForm()"><a href="#sign-up" id="signup-btn">Sign Up as New Member</a></button>
+      </div>
       <!-- Content ends here-->
     </div>
 
-    <footer><p>Copyright &copy; 2019 Swinburne. All Rights Reserved.</p></footer>
+    <footer><p>Copyright &copy; 2020 SwinHub. All Rights Reserved.</p></footer>
   </div>
 </body>
 </html>
