@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="scripts/form.js"></script>
+  <title>Forms | SwinHub</title>
+</head>
+
+<body>
+  <div id="page-container">
+    <div id="main-content">
+
+      <!-- Navigation Bar -->
+      <ul class="nav-bar">
+        <div class="name"><li><a href="home.html">SwinHub</a>&nbsp;&nbsp;X</li></div>
+        <div class="logo"><a href="https://www.swinburne.edu.au/"><img src="images/swin.png"></a></div>
+        <div class="nav">
+          <li><a href="home.html" class="main">Home</a></li>
+          <li class="dropdown" class="main">
+            <a href="javascript:void(0)" id="dropbtn" class="main">Information</a>
+            <div class="dropdown-content">
+              <a href="#academic.html">Academic</a>
+              <a href="#finance.html">Finance</a>
+              <a href="accommodation.html">Accommodation</a>
+              <a href='transport.html'>Transportation</a>
+              <a href='#job.html'>Job Search</a>
+              <a href='#health.html'>Health & Wellbeing</a>
+              <a href='#social.html'>Social Events</a>
+              <a href='#tutorials.html'>Tutorials</a>
+            </div>
+          </li>
+          <li><a href="discuss.html" class="main">Discussion</a></li>
+          <li><a href="#about.html" class="main">About</a></li>
+        </div>
+        <div class="login">
+          <li><a href="login.html">Login/Sign Up</a><span class="fa fa-sign-in"></span></li>
+        </div>
+      </ul>
+
+      <!-- Content starts here -->
+      <form id="signup-form" onsubmit="validateForm()">
+        <div class="form-container">
+            <fieldset>
+                <h2>Sign Up</h2>
+                <p>Please complete this form to create an account</p><hr class="hr">
+
+                <label for="id">Student ID</label><span class="required">*</span>
+                <input type="text" name="id" class="input" id="id" placeholder="123456789">
+                
+                <label for="email">Email</label><span class="required">*</span>
+                <input type="email" name="email" class="input" id="email" placeholder="example@email.com">
+
+                <label for="uname">Username</label><span class="required">*</span>
+                <input type="text" name="uname" class="input" id="uname" placeholder="User">
+
+                <label for="pwd">Password</label><span class="required">*</span>
+                <input type="password" class="input" name="pwd" id="pwd">
+
+                <label for="confirm">Confirm Password</label><span class="required">*</span>
+                <input type="password" class="input" name="confirm" id="confirm">
+
+                <label for="contact">Contact No.</label>
+                <input type="tel" name="contact" class="input" id="contact">
+
+                <p>By creating an account, you agree to our <a href="terms.html">Terms & Privacy</a></p>
+
+                <button type="button" class="cancel" onclick="cancelForm()">Cancel</button>
+                <button type="submit" class="sign-up">Sign Up</button>
+            </fieldset>
+        </div> 
+      </form>
+
+      <div id="selection">
+        <button><a href="https://students.swin.edu.au/">Login as Current Student</a></button>
+        <button onclick="displayForm()"><a href="#sign-up" id="signup-btn">Sign Up as New Member</a></button>
+      </div>
+      <!-- Content ends here-->
+    </div>
+
+    <footer><p>Copyright &copy; 2020 SwinHub. All Rights Reserved.</p></footer>
+  </div>
+</body>
+</html>
