@@ -254,6 +254,16 @@ footer {
   font-size: 1.25em;
 }
 
+/* Finance page */
+#fin-intro {
+  background: url("../images/finance_intro.jpg") no-repeat scroll;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  filter: blur(2.5px) brightness(0.75);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
 /* Accomodation page */
 #acc-intro {
   background: url("../images/accommodation_intro.jpg") no-repeat scroll;
